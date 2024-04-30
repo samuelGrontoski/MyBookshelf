@@ -1,7 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Entypo, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
-import { Button, Icon } from "react-native-elements";
 
 // Páginas
 import Home from './pages/Home/index';
