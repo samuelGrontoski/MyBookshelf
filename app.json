@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.samuelgrontoski.myBookshelf"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/myBookshelf.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b27f2d04-9b56-40aa-876f-8c9871351a7d"
+      }
     }
   }
 }
