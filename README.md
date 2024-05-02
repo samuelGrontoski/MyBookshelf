@@ -15,7 +15,3 @@ Com esta aplicação, você pode adicionar facilmente informações sobre os liv
 
 - Desenvolvido em TypeScript com React Native - Expo
 - Banco de dados NoSQL com Firestore DataBase - Firebase
-
-## Contribuições:
-
-Este projeto está aberto a contribuições. Se você tiver ideias para melhorias ou correções, sinta-se à vontade para enviar um pull request.
