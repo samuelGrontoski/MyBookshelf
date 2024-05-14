@@ -66,9 +66,19 @@ export default function MinhaEstante({ navigation }) {
 
         try {
             await deleteDoc(doc(database, "livros", selectedBook.id));
+
+            Toast.show({
+                type: 'success',
+                text1: 'Leitura excluída com sucesso',
+            });
             fecharDetalhes();
         } catch (error) {
             console.error("Erro ao excluir o livro:", error);
+            Toast.show({
+                type: 'error',
+                text1: 'Erro ao excluir leitura',
+                text2: error.message,
+            });
         }
     };
 
