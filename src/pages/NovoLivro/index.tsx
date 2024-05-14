@@ -25,7 +25,19 @@ export default function NovoLivro({ }) {
             const livroRef = await addDoc(collection(database, "livros"), livro);
             console.log("Livro adicionado com ID: ", livroRef.id);
 
-            setLivro("");
+            setLivro({
+                nome: '',
+                autor: '',
+                genero: '',
+                edicao: '',
+                volume: '',
+                paginas: '',
+                capa: '',
+                etiqueta: '',
+                status: '',
+                tempo: '',
+                nota: '',
+            });
 
             Toast.show({
                 type: 'success',
