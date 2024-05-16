@@ -15,3 +15,5 @@ Com esta aplicação, você pode adicionar facilmente informações sobre os liv
 
 - Desenvolvido em TypeScript com React Native - Expo
 - Banco de dados NoSQL com Firestore DataBase - Firebase
+
+https://www.youtube.com/watch?v=-qAhg4EDIwQ
