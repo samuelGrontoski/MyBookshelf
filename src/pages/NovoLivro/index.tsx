@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
         flexGrow: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
-        backgroundColor: '#2B2A33',
+        backgroundColor: '#fff',
         paddingHorizontal: 32,
         paddingVertical: 20,
     },

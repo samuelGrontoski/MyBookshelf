@@ -323,7 +323,7 @@ export default function MinhaEstante({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#2B2A33',
+        backgroundColor: '#fff',
         paddingHorizontal: 16,
         paddingTop: 20
     },
