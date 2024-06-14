@@ -1,6 +1,8 @@
+// index.tsx
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, FlatList, Image } from 'react-native';
+import { Text, View, TextInput, Button, FlatList, Image, ActivityIndicator } from 'react-native';
 import axios from 'axios';
+import styles from './styles';
 
 export default function App() {
   const [query, setQuery] = useState('');
@@ -40,7 +42,12 @@ export default function App() {
         onChangeText={setQuery}
       />
       <Button title="Pesquisar" onPress={searchBooks} />
-      {loading && <Text>Carregando...</Text>}
+      {loading && (
+        <View style={styles.loadingContainer}>
+          <Text style={styles.loadingText}>Carregando</Text>
+          <ActivityIndicator size="small" color="#B0ADC1" />
+        </View>
+      )}
       {error && <Text style={styles.error}>{error}</Text>}
       <FlatList
         data={books}
@@ -55,7 +62,8 @@ export default function App() {
             )}
             <View style={styles.bookInfo}>
               <Text style={styles.bookTitle}>{item.volumeInfo.title}</Text>
-              <Text>{item.volumeInfo.authors ? item.volumeInfo.authors.join(', ') : 'No Author'}</Text>
+              <Text style={styles.bookInfos}>{item.volumeInfo.authors ? item.volumeInfo.authors.join(', ') : 'No Author'}</Text>
+              <Text style={styles.bookInfos}>{item.volumeInfo.description}</Text>
             </View>
           </View>
         )}
@@ -63,48 +71,3 @@ export default function App() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-  input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 20,
-    paddingHorizontal: 10,
-    width: '100%',
-  },
-  bookItem: {
-    flexDirection: 'row',
-    padding: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
-  },
-  bookImage: {
-    width: 50,
-    height: 75,
-    marginRight: 10,
-  },
-  bookInfo: {
-    flexDirection: 'column',
-  },
-  bookTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  error: {
-    color: 'red',
-    marginBottom: 20,
-  },
-});
