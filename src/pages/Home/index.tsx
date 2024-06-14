@@ -1,7 +1,7 @@
-// index.tsx
 import React, { useState } from 'react';
-import { Text, View, TextInput, Button, FlatList, Image, ActivityIndicator } from 'react-native';
+import { Text, View, TextInput, Button, FlatList, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
 import axios from 'axios';
+import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
 
 export default function App() {
@@ -9,6 +9,7 @@ export default function App() {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const navigation = useNavigation();
 
   const searchBooks = async () => {
     setLoading(true);
@@ -53,7 +54,10 @@ export default function App() {
         data={books}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <View style={styles.bookItem}>
+          <TouchableOpacity
+            style={styles.bookItem}
+            onPress={() => navigation.navigate('BookDetails', { book: item })}
+          >
             {item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.thumbnail && (
               <Image
                 source={{ uri: item.volumeInfo.imageLinks.thumbnail }}
@@ -63,9 +67,8 @@ export default function App() {
             <View style={styles.bookInfo}>
               <Text style={styles.bookTitle}>{item.volumeInfo.title}</Text>
               <Text style={styles.bookInfos}>{item.volumeInfo.authors ? item.volumeInfo.authors.join(', ') : 'No Author'}</Text>
-              <Text style={styles.bookInfos}>{item.volumeInfo.description}</Text>
             </View>
-          </View>
+          </TouchableOpacity>
         )}
       />
     </View>

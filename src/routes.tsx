@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Entypo, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
 
 // Páginas
-import Home from './pages/Home/index';
+import HomeStack from './pages/Home/HomeStack';
 import NovoLivro from './pages/NovoLivro/index';
 import MinhaEstante from './pages/MinhaEstante/index';
 
@@ -48,7 +48,7 @@ export default function Routes() {
         >
             <Tab.Screen 
                 name="Início" 
-                component={Home}
+                component={HomeStack}
                 options={{
                     tabBarIcon: ({ size, color }) => (
                         <AntDesign name="home" size={size} color={color} />
