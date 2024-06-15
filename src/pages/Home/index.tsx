@@ -35,42 +35,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Pesquisar Livro</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Pesquisar por título ou autor"
-        value={query}
-        onChangeText={setQuery}
-      />
-      <Button title="Pesquisar" onPress={searchBooks} />
-      {loading && (
-        <View style={styles.loadingContainer}>
-          <Text style={styles.loadingText}>Carregando</Text>
-          <ActivityIndicator size="small" color="#B0ADC1" />
-        </View>
-      )}
-      {error && <Text style={styles.error}>{error}</Text>}
-      <FlatList
-        data={books}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <TouchableOpacity
-            style={styles.bookItem}
-            onPress={() => navigation.navigate('BookDetails', { book: item })}
-          >
-            {item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.thumbnail && (
-              <Image
-                source={{ uri: item.volumeInfo.imageLinks.thumbnail }}
-                style={styles.bookImage}
-              />
-            )}
-            <View style={styles.bookInfo}>
-              <Text style={styles.bookTitle}>{item.volumeInfo.title}</Text>
-              <Text style={styles.bookInfos}>{item.volumeInfo.authors ? item.volumeInfo.authors.join(', ') : 'No Author'}</Text>
-            </View>
-          </TouchableOpacity>
-        )}
-      />
+      <Text>
+        Bem vindo ao app!
+      </Text>
     </View>
   );
 }

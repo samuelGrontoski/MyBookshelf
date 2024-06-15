@@ -1,11 +1,11 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from './index';
+import NovoLivro from './index';
 import BookDetails from '../BookDetails/index';
 
 const Stack = createNativeStackNavigator();
 
-export default function HomeStack() {
+export default function BookStack() {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -19,10 +19,10 @@ export default function HomeStack() {
       }}
     >
       <Stack.Screen 
-        name="Home" 
-        component={Home} 
+        name="NovoLivro" 
+        component={NovoLivro} 
         options={{ 
-          headerTitle: 'Página Inicial',
+          headerTitle: 'Pesquisar Livro',
           headerTitleAlign: 'center'
         }} 
       />

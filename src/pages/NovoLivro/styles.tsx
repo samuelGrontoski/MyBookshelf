@@ -1,66 +1,63 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-    container: {
-        flexGrow: 1,
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        backgroundColor: '#282828',
-        paddingHorizontal: 32,
-        paddingVertical: 20,
-    },
-    title: {
-        fontSize: 32,
-        marginBottom: 16,
-        color: '#B0ADC1',
-        fontWeight: 'bold',
-        marginTop: 32
-    },
-    title2: {
-        fontSize: 28,
-        marginBottom: 16,
-        marginTop: 16,
-        color: '#B0ADC1',
-        fontWeight: 'bold',
-    },
-    text: {
-        textAlign: 'left',
-        fontSize: 16,
-        color: '#B0ADC1',
-        marginBottom: 2,
-    },
-    textLine: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: '100%',
-    },
-    input: {
-        width: '100%',
-        height: 40,
-        borderColor: '#B0ADC1',
-        borderWidth: 1,
-        borderRadius: 8,
-        paddingHorizontal: 8,
-        marginBottom: 16,
-    },
-    input2: {
-        height: 40,
-        borderColor: '#B0ADC1',
-        borderWidth: 1,
-        borderRadius: 8,
-        paddingHorizontal: 8,
-        marginBottom: 16,
-    },
-    group: {
-        width: '100%',
-    },
-    group2: {
-        width: '30%',
-    },
-    picker: {
-        width: '40%',
-        height: 40,
-        marginBottom: 16,
-        color: '#B0ADC1',
-    },
+  container: {
+    flex: 1,
+    backgroundColor: '#282828',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    color: '#B0ADC1'
+  },
+  input: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    borderRadius: 10,
+    marginBottom: 20,
+    paddingHorizontal: 10,
+    width: '100%',
+    color: '#B0ADC1'
+  },
+  loadingContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 10,
+  },
+  loadingText: {
+    color: '#B0ADC1',
+    marginRight: 10,
+  },
+  bookItem: {
+    flexDirection: 'row',
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#B0ADC1',
+  },
+  bookImage: {
+    width: 50,
+    height: 75,
+    marginRight: 10,
+  },
+  bookInfo: {
+    flexDirection: 'column',
+    width: '80%',
+  },
+  bookTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#B0ADC1'
+  },
+  bookInfos: {
+    color: '#B0ADC1'
+  },
+  error: {
+    color: 'red',
+    marginBottom: 20,
+  },
 });

@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Entypo, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
 
 // Páginas
+import BookStack from "./pages/NovoLivro/BookStack";
 import HomeStack from './pages/Home/HomeStack';
 import NovoLivro from './pages/NovoLivro/index';
 import MinhaEstante from './pages/MinhaEstante/index';
@@ -16,7 +17,7 @@ function HeaderTitleWithImage({ title, imageSource }) {
     return (
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Image source={imageSource} style={{ width: 30, height: 30, marginRight: 10 }} />
-            <Text style={{ color: '#B0ADC1', fontWeight: 'bold', fontSize: 18 }}>{title}</Text>
+            <Text style={{ color: '#0182AD', fontWeight: 'bold', fontSize: 18 }}>{title}</Text>
         </View>
     );
 }
@@ -40,7 +41,7 @@ export default function Routes() {
                     borderBottomColor: '#B0ADC1',
                     borderBottomWidth: 1,
                 },
-                headerTintColor: '#B0ADC1',
+                headerTintColor: '#0182AD',
                 headerTitleStyle: {
                     fontWeight: 'bold'
                 },
@@ -53,17 +54,17 @@ export default function Routes() {
                     tabBarIcon: ({ size, color }) => (
                         <AntDesign name="home" size={size} color={color} />
                     ),
-                    headerTitle: () => <HeaderTitleWithImage title="Início" imageSource={Logo} />
+                    headerTitle: () => <HeaderTitleWithImage title="myBookshelf" imageSource={Logo} />
                 }}
             />
             <Tab.Screen 
                 name="Novo Livro" 
-                component={NovoLivro}
+                component={BookStack}
                 options={{
                     tabBarIcon: ({ size, color }) => (
                         <Entypo name="open-book" size={size} color={color} />
                     ),
-                    headerTitle: () => <HeaderTitleWithImage title="Novo Livro" imageSource={Logo} />
+                    headerTitle: () => <HeaderTitleWithImage title="myBookshelf" imageSource={Logo} />
                 }}
             />
             <Tab.Screen 
@@ -73,7 +74,7 @@ export default function Routes() {
                     tabBarIcon: ({ size, color }) => (
                         <MaterialCommunityIcons name="bookshelf" size={size} color={color} />
                     ),
-                    headerTitle: () => <HeaderTitleWithImage title="Minha Estante" imageSource={Logo} />
+                    headerTitle: () => <HeaderTitleWithImage title="myBookshelf" imageSource={Logo} />
                 }}
             />
         </Tab.Navigator>
