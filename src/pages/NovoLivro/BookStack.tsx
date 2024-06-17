@@ -12,7 +12,7 @@ export default function BookStack() {
         headerStyle: {
           backgroundColor: '#141414',
         },
-        headerTintColor: '#B0ADC1',
+        headerTintColor: 'white',
         headerTitleStyle: {
           fontWeight: 'bold',
         },

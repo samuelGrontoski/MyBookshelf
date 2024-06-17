@@ -35,11 +35,13 @@ export default StyleSheet.create({
         paddingBottom: 10,
     },
     bookInfo: {
-        flexDirection: 'column',
+        display: 'flex',
+        alignItems: 'center',
         width: '80%',
         borderBottomWidth: 1,
         borderBottomColor: '#B0ADC1',
         paddingBottom: 10,
+        alignContent: 'center',
     },
     detailsInfosDesc: {
         fontSize: 16,

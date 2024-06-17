@@ -6,8 +6,7 @@ import { Entypo, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
 // Páginas
 import BookStack from "./pages/NovoLivro/BookStack";
 import HomeStack from './pages/Home/HomeStack';
-import NovoLivro from './pages/NovoLivro/index';
-import MinhaEstante from './pages/MinhaEstante/index';
+import BookshelfStack from './pages/MinhaEstante/BookshelfStack';
 
 import Logo from './assets/myBookshelf_icon.png';
 
@@ -69,7 +68,7 @@ export default function Routes() {
             />
             <Tab.Screen 
                 name="Minha Estante" 
-                component={MinhaEstante}
+                component={BookshelfStack}
                 options={{
                     tabBarIcon: ({ size, color }) => (
                         <MaterialCommunityIcons name="bookshelf" size={size} color={color} />
