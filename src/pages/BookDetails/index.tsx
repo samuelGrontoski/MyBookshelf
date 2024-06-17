@@ -6,10 +6,9 @@ import { database } from "../../config/firebaseConfig";
 import { addDoc, collection } from "firebase/firestore";
 import styles from './styles';
 
-export default function BookDetails() {
-    const route = useRoute();
+export default function BookDetails({ route }) {
     const { book } = route.params;
-    const [livro, setLivro] = useState({
+    const [livro] = useState({
         nome: book.volumeInfo.title,
         autor: book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Sem Autor',
         genero: book.volumeInfo.categories ? book.volumeInfo.categories.join(', ') : 'Sem Categorias',

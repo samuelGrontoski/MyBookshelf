@@ -24,7 +24,13 @@ export default function NovoLivro() {
 
     try {
       const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${queryParam}`);
-      setBooks(response.data.items || []);
+      const books = response.data.items || [];
+      books.forEach(book => {
+        if (!book.volumeInfo.imageLinks || !book.volumeInfo.imageLinks.thumbnail) {
+          book.volumeInfo.imageLinks = { thumbnail: 'Not Found' };
+        }
+      });
+      setBooks(books);
     } catch (error) {
       setError('Erro ao buscar livros. Tente novamente.');
       console.error(error);

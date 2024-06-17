@@ -3,14 +3,13 @@ import { View, Text, Image, ScrollView, SafeAreaView, TouchableOpacity } from 'r
 import { useRoute } from '@react-navigation/native';
 import styles from './styles';
 
-export default function DetalhesLivro() {
-    const route = useRoute();
-    const { book } = route.params;
+export default function DetalhesLivro({ route }) {
+    const { selectedBook } = route.params;
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#282828' }}>
             <ScrollView contentContainerStyle={styles.scrollViewContent}>
-                <Text style={styles.detailsTitle}>{book.volumeInfo.title}</Text>
+                <Text style={styles.detailsTitle}>{selectedBook.nome}</Text>
             </ScrollView>
         </SafeAreaView>
     );
