@@ -15,10 +15,7 @@ export default function BookDetails({ route }) {
         paginas: book.volumeInfo.pageCount,
         editora: book.volumeInfo.publisher,
         capa: book.volumeInfo.imageLinks.thumbnail,
-        etiqueta: '',
-        status: '',
-        tempo: '',
-        nota: '',
+        descricao: book.volumeInfo.description,
     });
 
     const salvarLivro = async () => {
@@ -70,6 +67,8 @@ export default function BookDetails({ route }) {
                         <View style={styles.bookItem}>
                             <Text style={styles.detailsInfosDesc}>Editora:</Text>
                             <Text style={styles.detailsInfos}>{book.volumeInfo.publisher}</Text>
+                        </View>
+                        <View style={styles.bookItem}>
                             <Text style={styles.detailsInfosDesc}>Publicação:</Text>
                             <Text style={styles.detailsInfos}>{book.volumeInfo.publishedDate}</Text>
                         </View>

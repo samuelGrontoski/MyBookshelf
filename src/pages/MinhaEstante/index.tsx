@@ -4,11 +4,13 @@ import { Picker } from '@react-native-picker/picker';
 import { ScrollView, SafeAreaView, View, Text, FlatList, Image, TouchableOpacity, Modal, TextInput, Button } from "react-native";
 import { onSnapshot, query, collection, deleteDoc, doc, updateDoc, setDoc } from "firebase/firestore";
 import { database } from "../../config/firebaseConfig";
+import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 
-export default function MinhaEstante({ navigation }) {
+export default function MinhaEstante() {
     const [books, setBooks] = useState([]);
+    const navigation = useNavigation();
 
     useEffect(() => {
         const q = query(collection(database, "livros"));

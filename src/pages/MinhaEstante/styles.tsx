@@ -77,11 +77,11 @@ export default StyleSheet.create({
     editorButtonContainer: {
         position: 'absolute',
         top: 20,
-        right: 20,
+        left: 20,
     },
     deleteButtonContainer: {
         position: 'absolute',
-        bottom: 20,
+        top: 20,
         right: 20,
     },
     deleteButtonText: {
@@ -182,7 +182,6 @@ export default StyleSheet.create({
     },
     textContainer: {
         alignItems: 'center',
-        marginTop: 20,
     },
     bookItem: {
         flexDirection: 'row',
