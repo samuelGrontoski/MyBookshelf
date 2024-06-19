@@ -14,6 +14,15 @@ export default StyleSheet.create({
     marginBottom: 20,
     color: '#B0ADC1'
   },
+  text: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    fontSize: 24,
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+  },
   input: {
     height: 40,
     borderColor: 'gray',

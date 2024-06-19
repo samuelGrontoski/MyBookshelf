@@ -35,8 +35,11 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>
-        Bem vindo ao app!
+      <Text style={styles.text}>
+      Seus livros, suas histórias, sempre ao seu alcance.
+      </Text>
+      <Text style={styles.text}>
+      Bem vindo ao myBookshelf!
       </Text>
     </View>
   );
